@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import { COLORS, SIZES } from '../../constants/constant';
 import icon from '../img/icon.png';
 import goldd from '../img/goldd.jpg';
@@ -18,7 +18,8 @@ const Message = () => {
                 </View>
             </View>
 
-            <TouchableOpacity style={{backgroundColor: COLORS.primary, height: 80,  padding: 10, marginTop: 1}}>
+          <ScrollView>
+          <TouchableOpacity style={{backgroundColor: COLORS.primary, height: 80,  padding: 10, marginTop: 1}}>
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 10}}>
                     <View >
                         <Image source={goldd} style={{width: 60, height: 60,borderRadius: 8,}}></Image>
@@ -48,6 +49,7 @@ const Message = () => {
                     </View>
                 </View>
             </TouchableOpacity>
+          </ScrollView>
         </View>
     )
 }

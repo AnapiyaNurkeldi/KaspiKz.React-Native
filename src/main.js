@@ -28,14 +28,18 @@ const Main = ({navigation}) => {
     }
     const HandlePressQR = () => {
         navigation.navigate('QR')
-        console.log('navigation');  
     }
     const HandlePressMyBank = () => {
         navigation.navigate('MyBank')
-        console.log('navigation');
+    }
+    const HandlePressTranslate = () => {
+        navigation.navigate('Translate')
+    }
+    const HandlePressPayments = () => {
+        navigation.navigate('Payments')
     }
     return (
-        <View style={{ flex: 1 }}>
+        <ScrollView style={{ flex: 1 }}>
             {/* header starts */}
             <View style={styles.header}>
                 <TextInput style={styles.searchInput} placeholder="Поиск по Kaspi.kz"></TextInput>
@@ -75,11 +79,11 @@ const Main = ({navigation}) => {
                         <Image source={MyBank} style={{ width: 35, height: 35, bottom: 5 }}></Image>
                          <Text style={styles.MainText}>Мой Банк</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={HandlePress} style={styles.mainThings}>
+                    <TouchableOpacity onPress={HandlePressPayments} style={styles.mainThings}>
                         <Image source={Payments} style={{ width: 35, height: 35 }}></Image>
                          <Text style={styles.MainText}>Платежи</Text>
                      </TouchableOpacity>
-                     <TouchableOpacity onPress={HandlePress} style={styles.mainThings}>
+                     <TouchableOpacity onPress={HandlePressTranslate} style={styles.mainThings}>
                         <Image source={change} style={{ width: 35, height: 35 }}></Image>
                          <Text style={styles.MainText}>Переводы</Text>
                      </TouchableOpacity>
@@ -143,7 +147,7 @@ const Main = ({navigation}) => {
                 </View>
             </ScrollView>
            {/* <Nav/> */}
-        </View>
+        </ScrollView>
     )
 }
 

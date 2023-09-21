@@ -43,10 +43,12 @@ const handlePressMessage = () => {
     setActiveMenu(false);
     navigation.navigate('message');
 }
-const handlePressMenu = () => {
+const handlePressServices = () => {
     setActiveHome(false);
     setActiveQR(false);
     setActiveMessage(false);
+    setActiveMenu(true);
+    navigation.navigate('Services');
 }  
     return (
         <View style={[{backgroundColor: COLORS.primary, height: 80, borderWidth: 0.3, borderColor: COLORS.SomeColor}, styles.fixedBottom]}>
@@ -68,11 +70,12 @@ const handlePressMenu = () => {
                 <Image source={activeMessage ? message : messageGray} style={{ width: 25, height: 25 }}></Image>
                 <Text style={{color: activeMessage ? COLORS.danger : COLORS.SomeColor, fontSize: 12, paddingTop: 2}}>Сообщения</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={handlePressMenu} style={{justifyContent: 'center', alignItems: 'center'}}>
+            <TouchableOpacity onPress={handlePressServices} style={{justifyContent: 'center', alignItems: 'center'}}>
                 <Image source={activeMenu ? menu : menuGray} style={{ width: 25, height: 25 }}></Image>
                 <Text style={{color: activeMenu ? COLORS.danger : COLORS.SomeColor, fontSize: 12, paddingTop: 2}}>Сервисы</Text>
             </TouchableOpacity>
         </View>
+        
     </View>
     )
 }

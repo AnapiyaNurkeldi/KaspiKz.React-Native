@@ -7,6 +7,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Nav from './src/components/nav';
 import MyBank from './src/pages/MyBank';
 import Message from './src/pages/message';
+import Services from './src/pages/Services';
+import Translate from './src/pages/Translate';
+import ToKaspiClient from './src/pages/Translates/ToKaspiClient';
+import Payments from './src/pages/Payments';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +36,27 @@ function App() {
       <Stack.Screen
         name='message'
         component={Message}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Services'
+        component={Services}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+        name='Translate'
+        component={Translate}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+        name='Payments'
+        component={Payments}
+        options={{ headerShown: false }}
+      />
+
+        <Stack.Screen
+        name='ToKaspiClient'
+        component={ToKaspiClient}
         options={{ headerShown: false }}
       />
       </Stack.Navigator>

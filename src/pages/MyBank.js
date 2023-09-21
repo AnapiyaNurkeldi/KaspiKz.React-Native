@@ -33,7 +33,7 @@ const MyBank = ({navigation}) => {
                         <Text style={{color: COLORS.SomeColor, fontSize: 13}}>*6543</Text>
                     </View>
                     <View style={{paddingBottom: 15}}>
-                        <Text style={{fontSize: 19, color: "#4A4A4A"}}>895 810,43 ₸</Text>
+                        <Text style={{fontSize: 19, color: "#4A4A4A"}}>736 025.64 ₸</Text>
                     </View>
                 </View>
             </View>
